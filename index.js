@@ -6,7 +6,7 @@ const dotenv = require("dotenv");
 const cookieParser = require("cookie-parser");
 const cors = require("cors");
 
-dotenv.config();
+dotenv.config({path:".env"});
 
 // set-up server
 const app = express();
