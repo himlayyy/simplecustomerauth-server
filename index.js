@@ -20,7 +20,12 @@ app.use(cors({origin: ["http://localhost:3000"],
             credentials:true}));
 
 // connect to mongoDB
-mongoose.connect(process.env.MDB_CONNECT, (err) => {
+// mongoose.connect(process.env.MDB_CONNECT, (err) => {
+//     if(err) return console.error(err);
+//     console.log("Connected to MongoDB");
+// });
+
+mongoose.connect("mongodb+srv://ash:G56NczeNrIrevWwb@cluster0.nfggv.mongodb.net/dev?retryWrites=true&w=majority", (err) => {
     if(err) return console.error(err);
     console.log("Connected to MongoDB");
 });
